@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 const links = [
+  { label: "Talk", href: "#talk" }, // TEMP — remove after Jun 25, 2026
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },

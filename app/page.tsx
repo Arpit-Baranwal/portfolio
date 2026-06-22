@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import UpcomingTalk from "@/components/UpcomingTalk"; // TEMP — remove after Jun 25, 2026
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <UpcomingTalk /> {/* TEMP — remove after Jun 25, 2026 */}
       <About />
       <Experience />
       <Education />
