@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const jobs = [
   {
     title: "Independent Data Engineer & ML Developer",
@@ -36,7 +38,7 @@ const jobs = [
   {
     title: "AWS Python Developer",
     company: "Legato Health Technology",
-    period: "Jun 2019 – May 2022",
+    period: "Jun 2020 – May 2022",
     tags: ["C# .Net", "AWS Glue", "Lambda", "AppSync", "Terraform", "OCR"],
     bullets: [
       "Developed 5+ backend services and data processing APIs in C# .Net, building the foundational healthcare data layer feeding into ML pipelines.",
@@ -56,19 +58,19 @@ export default function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-[#1e1e2e] hidden md:block ml-[11px]" />
+          <div className="absolute left-0 top-0 bottom-0 w-px bg-[#e4e8f3] hidden md:block ml-[11px]" />
 
           <div className="space-y-8">
             {jobs.map((job, i) => (
-              <div key={i} className="md:pl-10 relative">
+              <Reveal key={i} delay={i * 0.1} className="md:pl-10 relative">
                 {/* Dot */}
-                <div className="hidden md:block absolute left-0 top-6 w-[22px] h-[22px] rounded-full border-2 border-indigo-500 bg-[#0a0a0f]" />
+                <div className="hidden md:block absolute left-0 top-6 w-[22px] h-[22px] rounded-full border-2 border-indigo-500 bg-[#eef1fb]" />
 
                 <div className="card p-6 md:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{job.title}</h3>
-                      <p className="text-indigo-400 text-sm">{job.company}</p>
+                      <h3 className="text-lg font-semibold text-[#0f172a]">{job.title}</h3>
+                      <p className="text-indigo-600 text-sm">{job.company}</p>
                     </div>
                     <span className="text-[#64748b] text-sm whitespace-nowrap">{job.period}</span>
                   </div>
@@ -81,14 +83,14 @@ export default function Experience() {
 
                   <ul className="space-y-2">
                     {job.bullets.map((b, j) => (
-                      <li key={j} className="flex gap-3 text-sm text-[#94a3b8]">
+                      <li key={j} className="flex gap-3 text-sm text-[#475569]">
                         <span className="text-indigo-500 mt-1 flex-shrink-0">▸</span>
                         {b}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

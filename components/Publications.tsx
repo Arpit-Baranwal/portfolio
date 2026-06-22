@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 
 const pubs = [
   {
@@ -36,10 +37,10 @@ const pubs = [
 ];
 
 const colorMap: Record<string, string> = {
-  indigo: "bg-indigo-400/10 border-indigo-400/20 text-indigo-400",
-  purple: "bg-purple-400/10 border-purple-400/20 text-purple-400",
-  emerald: "bg-emerald-400/10 border-emerald-400/20 text-emerald-400",
-  amber: "bg-amber-400/10 border-amber-400/20 text-amber-400",
+  indigo: "bg-indigo-100 border-indigo-200 text-indigo-700",
+  purple: "bg-purple-100 border-purple-200 text-purple-700",
+  emerald: "bg-emerald-100 border-emerald-200 text-emerald-700",
+  amber: "bg-amber-100 border-amber-200 text-amber-700",
 };
 
 export default function Publications() {
@@ -51,7 +52,7 @@ export default function Publications() {
 
         <div className="space-y-5">
           {pubs.map((p, i) => (
-            <div key={i} className="card p-6 flex flex-col sm:flex-row gap-4">
+            <Reveal key={i} delay={i * 0.08} className="card p-6 flex flex-col sm:flex-row gap-4">
               <div className="flex-shrink-0 sm:w-16 text-center">
                 <span className="text-[#64748b] text-sm">{p.year}</span>
               </div>
@@ -62,11 +63,11 @@ export default function Publications() {
                   </span>
                   <span className="text-xs text-[#64748b]">{p.status}</span>
                 </div>
-                <h3 className="text-sm font-semibold text-white leading-snug">{p.title}</h3>
-                <p className="text-xs text-indigo-400">{p.venue}</p>
+                <h3 className="text-sm font-semibold text-[#0f172a] leading-snug">{p.title}</h3>
+                <p className="text-xs text-indigo-600">{p.venue}</p>
                 {p.note && <p className="text-xs text-[#64748b]">{p.note}</p>}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

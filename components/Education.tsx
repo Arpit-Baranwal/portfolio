@@ -1,14 +1,15 @@
 import { GraduationCap } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const education = [
   {
     degree: "Master's in Embedded Systems Engineering",
     specialization: "Specialization in AI",
-    school: "University of Freiburg",
+    school: "Albert Ludwigs University of Freiburg",
     location: "Freiburg, Germany",
     period: "Apr 2022 – Mar 2026",
     detail:
-      "Coursework in deep learning, reinforcement learning, computer vision, robotics, microsystems engineering, and optimization — building strong skills in applied ML and system modeling.",
+      "Coursework in deep learning, reinforcement learning, computer vision, robotics, microsystems engineering, and optimization building strong skills in applied ML and system modeling.",
   },
   {
     degree: "Bachelor's in Electronics & Communication Engineering",
@@ -30,27 +31,27 @@ export default function Education() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {education.map((edu, i) => (
-            <div key={i} className="card p-6 md:p-8 flex flex-col gap-4">
+            <Reveal key={i} delay={i * 0.12} className="card p-6 md:p-8 flex flex-col gap-4 h-full">
               <div className="flex items-start gap-4">
                 <div className="w-11 h-11 rounded-lg bg-indigo-600/20 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={20} className="text-indigo-400" />
+                  <GraduationCap size={20} className="text-indigo-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base font-semibold text-white leading-snug">{edu.degree}</h3>
+                  <h3 className="text-base font-semibold text-[#0f172a] leading-snug">{edu.degree}</h3>
                   {edu.specialization && (
-                    <p className="text-indigo-400 text-sm mt-0.5">{edu.specialization}</p>
+                    <p className="text-indigo-600 text-sm mt-0.5">{edu.specialization}</p>
                   )}
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
-                <span className="text-white">{edu.school}</span>
+                <span className="text-[#0f172a]">{edu.school}</span>
                 <span className="text-[#64748b]">{edu.period}</span>
               </div>
 
               <p className="text-xs text-[#64748b]">{edu.location}</p>
-              <p className="text-sm text-[#94a3b8] leading-relaxed">{edu.detail}</p>
-            </div>
+              <p className="text-sm text-[#475569] leading-relaxed">{edu.detail}</p>
+            </Reveal>
           ))}
         </div>
       </div>

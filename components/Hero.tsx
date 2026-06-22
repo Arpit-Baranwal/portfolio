@@ -22,8 +22,8 @@ export default function Hero() {
               <span className="gradient-text">Arpit Baranwal</span>
             </h1>
 
-            <p className="text-lg text-[#94a3b8] leading-relaxed max-w-xl">
-              Building ML pipelines, probabilistic models, and applied AI systems that solve real problems — from energy research at Fraunhofer ISE to healthcare data at scale.
+            <p className="text-lg text-[#475569] leading-relaxed max-w-xl">
+              Building ML pipelines, probabilistic models, and applied AI systems that solve real problems from energy research at Fraunhofer ISE to healthcare data at scale.
             </p>
 
             <p className="text-[#64748b] text-sm">
@@ -41,7 +41,7 @@ export default function Hero() {
               <a
                 href="/cv.pdf"
                 target="_blank"
-                className="px-6 py-3 rounded-lg border border-[#1e1e2e] text-[#94a3b8] hover:border-indigo-500 hover:text-white font-medium transition-all text-sm flex items-center gap-2"
+                className="px-6 py-3 rounded-lg border border-[#e4e8f3] text-[#475569] hover:border-indigo-500 hover:text-slate-900 font-medium transition-all text-sm flex items-center gap-2"
               >
                 <FileText size={16} />
                 Download CV
@@ -54,7 +54,7 @@ export default function Hero() {
                 href="https://github.com/Arpit-Baranwal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#64748b] hover:text-white transition-colors"
+                className="text-[#64748b] hover:text-slate-900 transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon size={20} />
@@ -63,7 +63,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/arpit-baranwal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#64748b] hover:text-white transition-colors"
+                className="text-[#64748b] hover:text-slate-900 transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon size={20} />
@@ -72,7 +72,7 @@ export default function Hero() {
                 href="https://medium.com/@arpitbaranwal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#64748b] hover:text-white transition-colors"
+                className="text-[#64748b] hover:text-slate-900 transition-colors"
                 aria-label="Medium"
               >
                 <BookOpen size={20} />
@@ -82,7 +82,7 @@ export default function Hero() {
 
           {/* Photo */}
           <div className="flex-shrink-0">
-            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#1e1e2e] glow">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#e4e8f3] glow">
               <Image
                 src="/formal.jpg"
                 alt="Arpit Baranwal"
@@ -96,7 +96,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <div className="flex justify-center mt-20 animate-bounce">
-          <a href="#about" className="text-[#1e1e2e] hover:text-indigo-500 transition-colors">
+          <a href="#about" className="text-[#e4e8f3] hover:text-indigo-500 transition-colors">
             <ArrowDown size={24} />
           </a>
         </div>

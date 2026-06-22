@@ -8,6 +8,7 @@ const links = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Publications", href: "#publications" },
+  { label: "Writing", href: "#writing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -24,19 +25,19 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0a0a0f]/90 backdrop-blur-md border-b border-[#1e1e2e]" : ""
+        scrolled ? "bg-[#eef1fb]/90 backdrop-blur-md border-b border-[#e4e8f3]" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="text-lg font-bold gradient-text">AB</a>
+        <a href="#hero" className="text-lg font-bold gradient-text">A.Baranwal</a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-[#94a3b8] hover:text-white transition-colors"
+              className="text-sm text-[#475569] hover:text-slate-900 transition-colors"
             >
               {l.label}
             </a>
@@ -52,7 +53,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-[#94a3b8] hover:text-white"
+          className="md:hidden text-[#475569] hover:text-slate-900"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,13 +68,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0a0a0f] border-t border-[#1e1e2e] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[#eef1fb] border-t border-[#e4e8f3] px-6 py-4 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="text-sm text-[#94a3b8] hover:text-white transition-colors"
+              className="text-sm text-[#475569] hover:text-slate-900 transition-colors"
             >
               {l.label}
             </a>

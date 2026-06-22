@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Reveal from "@/components/Reveal";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
@@ -33,6 +34,8 @@ const groups: { title: string; skills: Skill[] }[] = [
     title: "Cloud, MLOps & Tools",
     skills: [
       { name: "AWS", icon: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+      { name: "Azure", icon: `${DEVICON}/azure/azure-original.svg` },
+      { name: "GCP", icon: `${DEVICON}/googlecloud/googlecloud-original.svg` },
       { name: "Docker", icon: `${DEVICON}/docker/docker-original.svg` },
       { name: "Terraform", icon: `${DEVICON}/terraform/terraform-original.svg` },
       { name: "Git", icon: `${DEVICON}/git/git-original.svg` },
@@ -43,7 +46,7 @@ const groups: { title: string; skills: Skill[] }[] = [
   },
 ];
 
-// Specialized skills without standard logos — shown as a tag cloud
+// Specialized skills without standard logos shown as a tag cloud
 const concepts = [
   "RAG", "TabPFN", "Transformers", "Monte Carlo Methods", "Kriging Regression",
   "Uncertainty Quantification", "Probabilistic Modeling", "Anomaly Detection",
@@ -59,37 +62,33 @@ export default function Skills() {
         <h2 className="text-3xl md:text-4xl font-bold mb-12">What I work with</h2>
 
         <div className="space-y-6">
-          {groups.map((group) => (
-            <div key={group.title} className="card p-6 md:p-8">
-              <h3 className="text-lg font-semibold text-white mb-6 pb-3 border-b border-[#1e1e2e]">
+          {groups.map((group, i) => (
+            <Reveal key={group.title} delay={i * 0.1} className="card p-6">
+              <h3 className="text-base font-semibold text-[#0f172a] mb-5 pb-3 border-b border-[#e4e8f3]">
                 {group.title}
               </h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-6">
+              <div className="flex flex-wrap gap-3">
                 {group.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex flex-col items-center gap-3 group"
+                    className="flex items-center gap-3 bg-[#eef1fb] border border-[#e4e8f3] rounded-lg px-4 py-2.5 transition-all duration-200 hover:border-indigo-500/50 hover:-translate-y-0.5"
                   >
-                    <div className="w-16 h-16 rounded-xl bg-[#0a0a0f] border border-[#1e1e2e] flex items-center justify-center transition-all duration-200 group-hover:border-indigo-500/50 group-hover:-translate-y-1">
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="w-9 h-9 object-contain"
-                        loading="lazy"
-                      />
-                    </div>
-                    <span className="text-xs text-[#94a3b8] text-center group-hover:text-white transition-colors">
-                      {skill.name}
-                    </span>
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-7 h-7 object-contain"
+                      loading="lazy"
+                    />
+                    <span className="text-[15px] font-medium text-[#334155]">{skill.name}</span>
                   </div>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
 
           {/* Methods & concepts */}
-          <div className="card p-6 md:p-8">
-            <h3 className="text-lg font-semibold text-white mb-6 pb-3 border-b border-[#1e1e2e]">
+          <Reveal delay={0.1} className="card p-6 md:p-8">
+            <h3 className="text-lg font-semibold text-[#0f172a] mb-6 pb-3 border-b border-[#e4e8f3]">
               Methods & Specializations
             </h3>
             <div className="flex flex-wrap gap-2.5">
@@ -99,7 +98,7 @@ export default function Skills() {
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
