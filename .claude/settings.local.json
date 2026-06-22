@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:gokulai.dev)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm --version)",
+      "Bash(cp /home/arpit/Documents/Projects/portfolio/formal.jpg /tmp/formal.jpg)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(mkdir -p /tmp/portfolio-build)",
+      "Read(//tmp/**)",
+      "Bash(npm install *)",
+      "Bash(cp /tmp/formal.jpg /tmp/portfolio-build/public/formal.jpg)",
+      "Bash(cp /home/arpit/Documents/Projects/portfolio/../../../Downloads/cv.pdf /tmp/portfolio-build/public/cv.pdf)",
+      "Read(//home/arpit/**)",
+      "Bash(cp /home/arpit/Downloads/cv.pdf /tmp/portfolio-build/public/cv.pdf && echo \"Copied\")",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)"
+    ],
+    "additionalDirectories": [
+      "/tmp",
+      "/home/arpit/Downloads"
+    ]
+  }
+}
