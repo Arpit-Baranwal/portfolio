@@ -17,7 +17,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-4 text-[#475569] leading-relaxed">
             <p>
-              I&apos;m a Data Scientist with over 5 years of experience building production ML systems across healthcare, energy research, and cloud infrastructure. Currently based in <strong className="text-[#0f172a]">Freiburg, Germany</strong>, I recently completed my Master&apos;s in Embedded Systems Engineering (AI specialization) at the University of Freiburg.
+              I&apos;m a Data Scientist with over 5 years of experience building production ML systems across healthcare, energy research, and cloud infrastructure. I recently completed my Master&apos;s in Embedded Systems Engineering (AI specialization) at the University of Freiburg.
             </p>
             <p>
               At <strong className="text-[#0f172a]">Fraunhofer ISE</strong>, I developed probabilistic surrogate models, uncertainty-aware prediction frameworks, and a RAG knowledge system used across three research teams. Before that, I built large-scale healthcare ETL pipelines and serverless AWS architectures at Legato Health Technology.

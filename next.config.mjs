@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     localPatterns: [
-      { pathname: "/formal.jpg" },
+      { pathname: "/**" },
     ],
   },
 };

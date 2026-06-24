@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const education = [
@@ -6,6 +6,7 @@ const education = [
     degree: "Master's in Embedded Systems Engineering",
     specialization: "Specialization in AI",
     school: "Albert Ludwigs University of Freiburg",
+    logo: "/uni-freiburg.jpeg",
     location: "Freiburg, Germany",
     period: "Apr 2022 – Mar 2026",
     detail:
@@ -15,6 +16,7 @@ const education = [
     degree: "Bachelor's in Electronics & Communication Engineering",
     specialization: "",
     school: "Asansol Engineering College",
+    logo: "/aec.png",
     location: "Asansol, India",
     period: "2016 – 2020",
     detail:
@@ -33,8 +35,14 @@ export default function Education() {
           {education.map((edu, i) => (
             <Reveal key={i} delay={i * 0.12} className="card p-6 md:p-8 flex flex-col gap-4 h-full">
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-lg bg-indigo-600/20 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={20} className="text-indigo-600" />
+                <div className="w-12 h-12 rounded-lg border border-[#e4e8f3] bg-white flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <Image
+                    src={edu.logo}
+                    alt={`${edu.school} logo`}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain p-1"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-[#0f172a] leading-snug">{edu.degree}</h3>

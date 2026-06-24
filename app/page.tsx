@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+// import Companies from "@/components/Companies"; // DISABLED — uncomment to show company logo strip
 import UpcomingTalk from "@/components/UpcomingTalk"; // TEMP — remove after Jun 25, 2026
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      {/* <Companies /> */}{/* DISABLED — uncomment to show company logo strip */}
       <UpcomingTalk /> {/* TEMP — remove after Jun 25, 2026 */}
       <About />
       <Experience />

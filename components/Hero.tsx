@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import { FileText, BookOpen, ArrowDown } from "lucide-react";
+import { FileText, BookOpen, ArrowDown, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-24 pb-16 px-6">
+    <section id="hero" className="relative flex items-center pt-32 pb-20 px-6">
       {/* Background glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-indigo-600/5 blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 w-[900px] h-[900px] rounded-full bg-indigo-600/[0.03] blur-[120px]" />
       </div>
 
       <div className="max-w-6xl mx-auto w-full">
@@ -26,8 +26,9 @@ export default function Hero() {
               Building ML pipelines, probabilistic models, and applied AI systems that solve real problems from energy research at Fraunhofer ISE to healthcare data at scale.
             </p>
 
-            <p className="text-[#64748b] text-sm">
-              📍 Freiburg, Germany &nbsp;·&nbsp; Open to opportunities &nbsp;·&nbsp; No sponsorship needed
+            <p className="text-[#64748b] text-sm flex items-center gap-1.5">
+              <MapPin size={14} className="text-[#64748b]" />
+              Freiburg, Germany &nbsp;·&nbsp; Open to opportunities &nbsp;·&nbsp; No sponsorship needed
             </p>
 
             {/* CTAs */}
@@ -92,13 +93,6 @@ export default function Hero() {
               />
             </div>
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="flex justify-center mt-20 animate-bounce">
-          <a href="#about" className="text-[#e4e8f3] hover:text-indigo-500 transition-colors">
-            <ArrowDown size={24} />
-          </a>
         </div>
       </div>
     </section>

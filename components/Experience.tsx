@@ -1,9 +1,13 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const jobs = [
   {
     title: "Independent Data Engineer & ML Developer",
     company: "Self-employed",
+    logo: "",
+    logoW: 0,
+    logoH: 0,
     period: "Apr 2026 – Present",
     tags: ["Databricks", "PySpark", "PowerBI", "NLP", "Forecasting"],
     bullets: [
@@ -15,6 +19,9 @@ const jobs = [
   {
     title: "Student Research Assistant",
     company: "Fraunhofer ISE, Freiburg",
+    logo: "/fraunhofer.jpg",
+    logoW: 1424,
+    logoH: 256,
     period: "Jun 2024 – Apr 2026",
     tags: ["TabPFN", "Kriging", "Monte Carlo", "RAG", "Python", "MATLAB"],
     bullets: [
@@ -26,7 +33,10 @@ const jobs = [
   },
   {
     title: "Associate Cloud Intern",
-    company: "RealWorldOne",
+    company: "RealWorldOne, Freiburg",
+    logo: "/realworldone.png",
+    logoW: 320,
+    logoH: 59,
     period: "Sep 2023 – Feb 2024",
     tags: ["AWS", "IAM", "CI/CD", "ML Deployment"],
     bullets: [
@@ -38,6 +48,9 @@ const jobs = [
   {
     title: "AWS Python Developer",
     company: "Legato Health Technology",
+    logo: "/legato.jpeg",
+    logoW: 176,
+    logoH: 72,
     period: "Jun 2020 – May 2022",
     tags: ["C# .Net", "AWS Glue", "Lambda", "AppSync", "Terraform", "OCR"],
     bullets: [
@@ -68,9 +81,22 @@ export default function Experience() {
 
                 <div className="card p-6 md:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#0f172a]">{job.title}</h3>
-                      <p className="text-indigo-600 text-sm">{job.company}</p>
+                    <div className="flex items-center gap-4">
+                      {job.logo && (
+                        <div className="flex-shrink-0 h-14 px-4 rounded-lg border border-[#e4e8f3] bg-white flex items-center justify-center">
+                          <Image
+                            src={job.logo}
+                            alt={`${job.company} logo`}
+                            width={job.logoW}
+                            height={job.logoH}
+                            className="h-7 w-auto max-w-[150px] object-contain"
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <h3 className="text-lg font-semibold text-[#0f172a]">{job.title}</h3>
+                        <p className="text-indigo-600 text-sm">{job.company}</p>
+                      </div>
                     </div>
                     <span className="text-[#64748b] text-sm whitespace-nowrap">{job.period}</span>
                   </div>
