@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FileText, BookOpen, ArrowDown, MapPin } from "lucide-react";
+import { FileText, BookOpen, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
 export default function Hero() {
