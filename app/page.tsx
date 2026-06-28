@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 // import Companies from "@/components/Companies"; // DISABLED — uncomment to show company logo strip
-import UpcomingTalk from "@/components/UpcomingTalk"; // TEMP — remove after Jun 25, 2026
+import FeaturedTalk from "@/components/FeaturedTalk";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <Companies /> */}{/* DISABLED — uncomment to show company logo strip */}
-      <UpcomingTalk /> {/* TEMP — remove after Jun 25, 2026 */}
+      <FeaturedTalk />
       <About />
       <Experience />
       <Education />
